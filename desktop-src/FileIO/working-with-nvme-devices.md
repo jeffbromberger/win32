@@ -270,16 +270,19 @@ The [**STORAGE\_PROTOCOL\_SPECIFIC\_DATA**](/windows/desktop/api/WinIoCtl/ns-win
 typedef struct _STORAGE_PROTOCOL_SPECIFIC_DATA {
 
     STORAGE_PROTOCOL_TYPE ProtocolType;
-    ULONG   DataType;                 
+    DWORD                 DataType;
 
-    ULONG   ProtocolDataRequestValue;
-    ULONG   ProtocolDataRequestSubValue;
+    DWORD                 ProtocolDataRequestValue;
+    DWORD                 ProtocolDataRequestSubValue;
 
-    ULONG   ProtocolDataOffset;         
-    ULONG   ProtocolDataLength;
+    DWORD                 ProtocolDataOffset;
+    DWORD                 ProtocolDataLength;
 
-    ULONG   FixedProtocolReturnData;   
-    ULONG   Reserved[3];
+    DWORD                 FixedProtocolReturnData;
+
+    DWORD                 ProtocolDataRequestSubValue2;
+    DWORD                 ProtocolDataRequestSubValue3;
+    DWORD                 ProtocolDataRequestSubValue4;
 
 } STORAGE_PROTOCOL_SPECIFIC_DATA, *PSTORAGE_PROTOCOL_SPECIFIC_DATA;
 ```
